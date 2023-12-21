@@ -1,13 +1,10 @@
 version: '3'
 
 services:
-  monitor-ping:
-    image: monitor-ping:latest
-    container_name: monitor-ping
+  monitorping:
+    image: monitorping:latest
+    container_name: monitorping
     restart: unless-stopped
-    environment:
-      - TZ=America/Sao_Paulo
-      - DEBIAN_FRONTEND=noninteractive
     volumes:
       - ./:/app
       - ./logs:/app/logs
