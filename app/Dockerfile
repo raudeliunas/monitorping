@@ -1,5 +1,7 @@
 # Use uma imagem base adequada
 FROM alpine:3.14
+RUN apk add --no-cache tzdata
+ENV TZ=America/Sao_Paulo
 
 # Copie o script Bash para o contêiner
 COPY monitorping.sh /app/monitorping.sh
