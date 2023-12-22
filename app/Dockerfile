@@ -1,8 +1,5 @@
 # Use uma imagem base adequada
-FROM ubuntu:20.04
-ENV TZ=America/Sao_Paulo
-ENV DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt-get install -y tzdata && apt-get install -y iputils-ping
+FROM alpine:3.14
 
 # Copie o script Bash para o contêiner
 COPY monitorping.sh /app/monitorping.sh
